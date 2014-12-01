@@ -52,3 +52,9 @@ docs/_build/
 
 # PyBuilder
 target/
+*.pyd
+*.dll
+*.DLL
+*.so.*
+*.o
+*.a
