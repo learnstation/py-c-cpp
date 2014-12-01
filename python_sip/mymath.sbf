@@ -1,0 +1,3 @@
+target = mymath
+sources = sipmymathcmodule.c
+headers = sipAPImymath.h

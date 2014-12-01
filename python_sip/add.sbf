@@ -1,3 +1,0 @@
-target = add
-sources = sipaddcmodule.c
-headers = sipAPIadd.h
