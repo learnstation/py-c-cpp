@@ -77,6 +77,10 @@ add = _mytest.add
 def sub(*args):
   return _mytest.sub(*args)
 sub = _mytest.sub
+
+def fib(*args):
+  return _mytest.fib(*args)
+fib = _mytest.fib
 # This file is compatible with both classic and new-style classes.
 
 

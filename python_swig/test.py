@@ -42,8 +42,13 @@ def ftime(repeat=10, number=1):
 def add(a, b, count):
     ret = 0
     for x in xrange(count):
-        ret += a + b
+        print(x)
     return ret
+
+def fib(n):
+    if n < 2:
+        return n
+    return fib(n - 1) + fib(n - 2)
 
 @ftime()
 def test(a, b, count):
@@ -54,9 +59,23 @@ def test(a, b, count):
 def test2(a, b, count):
     add(a, b, count)
 
+@ftime(repeat=1)
+def testfib(count):
+    """Stupid test function"""
+    mytest.fib(count)
+
+@ftime(repeat=1)
+def testfib2(count):
+    fib(count)
+
 if __name__ == '__main__':
-    count = 1000
-    ret , usec= test(1, 2, count)
-    ret1, usec1= test2(1, 2, count)
+    count = 40
+    # ret , usec= test(1, 2, count)
+    # ret1, usec1= test2(1, 2, count)
+    # print ret == ret1
+    # print usec1 / usec
+
+    ret , usec= testfib(count)
+    ret1, usec1= testfib2(count)
     print ret == ret1
     print usec1 / usec
